@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chief Marketing Officer | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#0a0a0a',
+                            dark: '#171717',
+                            gray: '#262626',
+                            yellow: '#eab308', // Tailwind yellow-500
+                            lightYellow: '#fef08a'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #f5f5f5;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #eab308; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #ca8a04; }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-yellow selection:text-black">
+
+    <nav class="fixed w-full z-50 bg-brand-black/90 backdrop-blur-md border-b border-brand-gray transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold tracking-tighter text-white">
+                        MARKETING<span class="text-brand-yellow">LEADER</span>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#about" class="hover:text-brand-yellow px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                        <a href="#experience" class="hover:text-brand-yellow px-3 py-2 rounded-md text-sm font-medium transition-colors">Experience</a>
+                        <a href="#services" class="hover:text-brand-yellow px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
+                        <a href="#contact" class="bg-brand-yellow text-black hover:bg-yellow-400 px-4 py-2 rounded-md text-sm font-bold transition-all shadow-[0_0_15px_rgba(234,179,8,0.3)]">Hire Me</a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-brand-gray focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-brand-dark border-b border-brand-gray" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="hover:text-brand-yellow block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#experience" class="hover:text-brand-yellow block px-3 py-2 rounded-md text-base font-medium">Experience</a>
+                <a href="#services" class="hover:text-brand-yellow block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="#contact" class="text-brand-yellow block px-3 py-2 rounded-md text-base font-bold">Hire Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="pt-32 pb-20 lg:pt-48 lg:pb-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-12">
+        <div class="flex-1 text-center lg:text-left">
+            <div class="inline-block px-4 py-2 rounded-full bg-brand-gray border border-brand-gray text-brand-yellow text-sm font-semibold tracking-wide mb-6">
+                Available for CMO Roles
+            </div>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                Driving Scale for <br class="hidden lg:block"/>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-yellow to-yellow-200">Startups & SMBs</span>
+            </h1>
+            <p class="text-gray-400 text-lg sm:text-xl mb-8 max-w-2xl mx-auto lg:mx-0">
+                With over a decade of hands-on business ownership, operations management, and strategic marketing experience, I build growth engines that work.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
+                <a href="#contact" class="px-8 py-4 bg-brand-yellow text-black rounded-lg font-bold hover:bg-yellow-400 transition-all shadow-[0_0_20px_rgba(234,179,8,0.4)] text-center">
+                    Let's Talk Growth
+                </a>
+                <a href="#services" class="px-8 py-4 bg-transparent border border-gray-600 rounded-lg font-medium hover:border-brand-yellow hover:text-brand-yellow transition-all text-center">
+                    View Services
+                </a>
+            </div>
+            
+            <div class="relative p-6 bg-brand-dark rounded-xl border-l-4 border-brand-yellow italic text-gray-300 shadow-xl">
+                <i class="fas fa-quote-left text-brand-gray text-4xl absolute top-4 left-4 opacity-50"></i>
+                <p class="relative z-10 text-lg font-medium">
+                    "Growth is not an accident. It's the result of strategic marketing, consistent execution, and measurable results."
+                </p>
+            </div>
+        </div>
+
+        <div class="flex-1 flex justify-center lg:justify-end">
+            <div class="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
+                <!-- Decorative background elements -->
+                <div class="absolute inset-0 bg-brand-yellow rounded-full blur-3xl opacity-20 animate-pulse"></div>
+                <div class="absolute inset-4 border-2 border-brand-yellow rounded-full animate-[spin_10s_linear_infinite] opacity-50"></div>
+                
+                <!-- Profile Image Placeholder -->
+                <div class="relative w-full h-full rounded-full overflow-hidden border-4 border-brand-gray shadow-2xl z-10 bg-brand-dark flex items-center justify-center group">
+                    <!-- REPLACE THE SRC BELOW WITH YOUR ACTUAL IMAGE URL -->
+                    <img src="https://placehold.co/400x400/171717/eab308?text=Upload\nProfile\nPicture" alt="Profile Picture" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-brand-dark border-y border-brand-gray/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-6">From Operations to <span class="text-brand-yellow">Strategic Leadership</span></h2>
+                    <p class="text-gray-400 text-lg mb-6 leading-relaxed">
+                        My career didn't start in a traditional marketing boardroom. It started on the front lines of customer experience. Working as a Technical Support Representative taught me the absolute importance of understanding the customer's pain points and psychology.
+                    </p>
+                    <p class="text-gray-400 text-lg mb-6 leading-relaxed">
+                        Transitioning into management at Perpetual Drug Testing Center, I learned how to build systems and manage teams. But my true crucible was founding and managing <strong>Vape Mustache</strong> for 10 years. 
+                    </p>
+                    <div class="mt-8">
+                        <h3 class="text-xl font-bold text-white mb-4 border-b border-brand-gray pb-2">Challenges Overcame</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-brand-yellow mt-1 mr-3"></i>
+                                <div>
+                                    <strong class="text-gray-200">Navigating Highly Regulated Markets:</strong>
+                                    <p class="text-gray-500 text-sm mt-1">Successfully marketed and sustained Vape Mustache for a decade amidst strict and constantly evolving advertising regulations.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-brand-yellow mt-1 mr-3"></i>
+                                <div>
+                                    <strong class="text-gray-200">Scaling with Limited Bootstrapped Capital:</strong>
+                                    <p class="text-gray-500 text-sm mt-1">Learned to maximize ROI on every marketing dollar, prioritizing organic growth, community building, and high-conversion tactics.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-brand-yellow mt-1 mr-3"></i>
+                                <div>
+                                    <strong class="text-gray-200">Adapting from Local to Digital:</strong>
+                                    <p class="text-gray-500 text-sm mt-1">Spearheaded virtual marketing initiatives (like at Lunara Bar) to pivot strategies when physical foot traffic wasn't enough.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-brand-black p-6 rounded-xl border border-brand-gray flex flex-col justify-center items-center text-center transform translate-y-4">
+                        <i class="fas fa-briefcase text-4xl text-brand-yellow mb-4"></i>
+                        <h4 class="text-3xl font-bold text-white">17+</h4>
+                        <p class="text-gray-500 text-sm">Years Total Experience</p>
+                    </div>
+                    <div class="bg-brand-black p-6 rounded-xl border border-brand-gray flex flex-col justify-center items-center text-center transform -translate-y-4">
+                        <i class="fas fa-store text-4xl text-brand-yellow mb-4"></i>
+                        <h4 class="text-3xl font-bold text-white">10</h4>
+                        <p class="text-gray-500 text-sm">Years Business Owner</p>
+                    </div>
+                    <div class="bg-brand-black p-6 rounded-xl border border-brand-gray flex flex-col justify-center items-center text-center transform translate-y-4">
+                        <i class="fas fa-users text-4xl text-brand-yellow mb-4"></i>
+                        <h4 class="text-3xl font-bold text-white">SMBs</h4>
+                        <p class="text-gray-500 text-sm">Core Target Focus</p>
+                    </div>
+                    <div class="bg-brand-black p-6 rounded-xl border border-brand-gray flex flex-col justify-center items-center text-center transform -translate-y-4">
+                        <i class="fas fa-chart-line text-4xl text-brand-yellow mb-4"></i>
+                        <h4 class="text-3xl font-bold text-white">ROI</h4>
+                        <p class="text-gray-500 text-sm">Data-Driven Results</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Professional <span class="text-brand-yellow">Journey</span></h2>
+                <p class="text-gray-400">A track record of management, ownership, and technical problem-solving.</p>
+            </div>
+            
+            <div class="relative border-l-2 border-brand-gray ml-3 md:ml-0 md:pl-0">
+                <!-- Timeline Item 1 -->
+                <div class="mb-10 relative md:w-1/2 md:ml-auto md:pl-8 pl-8">
+                    <div class="absolute w-6 h-6 bg-brand-yellow rounded-full -left-3 md:-left-3 border-4 border-brand-black top-1"></div>
+                    <div class="bg-brand-dark p-6 rounded-xl border border-brand-gray hover:border-brand-yellow transition-colors">
+                        <span class="text-brand-yellow text-sm font-bold tracking-wider uppercase">Most Recent (6 Months)</span>
+                        <h3 class="text-xl font-bold text-white mt-1">Virtual Marketing Officer</h3>
+                        <p class="text-gray-300 font-medium mb-3">Lunara Bar</p>
+                        <p class="text-gray-500 text-sm">
+                            Directed digital marketing campaigns, managed online brand presence, and drove customer acquisition through targeted virtual marketing strategies to boost foot traffic and brand awareness.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="mb-10 relative md:w-1/2 md:mr-auto md:pr-8 pl-8 md:pl-0 text-left md:text-right">
+                    <div class="absolute w-6 h-6 bg-brand-gray rounded-full -left-3 md:left-auto md:-right-3 border-4 border-brand-black top-1"></div>
+                    <div class="bg-brand-dark p-6 rounded-xl border border-brand-gray hover:border-brand-gray transition-colors">
+                        <span class="text-gray-400 text-sm font-bold tracking-wider uppercase">10 Years</span>
+                        <h3 class="text-xl font-bold text-white mt-1">Business Owner & Manager</h3>
+                        <p class="text-gray-300 font-medium mb-3">Vape Mustache</p>
+                        <p class="text-gray-500 text-sm">
+                            Founded and scaled a retail and lifestyle business. Handled end-to-end operations including inventory, staff management, P&L, grassroots marketing, community building, and customer retention.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="mb-10 relative md:w-1/2 md:ml-auto md:pl-8 pl-8">
+                    <div class="absolute w-6 h-6 bg-brand-gray rounded-full -left-3 md:-left-3 border-4 border-brand-black top-1"></div>
+                    <div class="bg-brand-dark p-6 rounded-xl border border-brand-gray">
+                        <span class="text-gray-400 text-sm font-bold tracking-wider uppercase">4 Years</span>
+                        <h3 class="text-xl font-bold text-white mt-1">Manager</h3>
+                        <p class="text-gray-300 font-medium mb-3">Perpetual Drug Testing Center</p>
+                        <p class="text-gray-500 text-sm">
+                            Led daily facility operations, ensured strict compliance with health regulations, managed staff schedules, and optimized patient processing workflows for efficiency and accuracy.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="mb-10 relative md:w-1/2 md:mr-auto md:pr-8 pl-8 md:pl-0 text-left md:text-right">
+                    <div class="absolute w-6 h-6 bg-brand-gray rounded-full -left-3 md:left-auto md:-right-3 border-4 border-brand-black top-1"></div>
+                    <div class="bg-brand-dark p-6 rounded-xl border border-brand-gray">
+                        <span class="text-gray-400 text-sm font-bold tracking-wider uppercase">2 Years</span>
+                        <h3 class="text-xl font-bold text-white mt-1">Technical Support Representative</h3>
+                        <p class="text-gray-300 font-medium mb-3">Stream Global Services</p>
+                        <p class="text-gray-500 text-sm">
+                            Provided advanced technical troubleshooting, maintained high customer satisfaction scores, and de-escalated complex client issues efficiently.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 5 -->
+                <div class="relative md:w-1/2 md:ml-auto md:pl-8 pl-8">
+                    <div class="absolute w-6 h-6 bg-brand-gray rounded-full -left-3 md:-left-3 border-4 border-brand-black top-1"></div>
+                    <div class="bg-brand-dark p-6 rounded-xl border border-brand-gray">
+                        <span class="text-gray-400 text-sm font-bold tracking-wider uppercase">1 Year</span>
+                        <h3 class="text-xl font-bold text-white mt-1">Technical Support Representative</h3>
+                        <p class="text-gray-300 font-medium mb-3">Convergys Philippines</p>
+                        <p class="text-gray-500 text-sm">
+                            Started my career in a high-paced call center environment, developing a foundation in active listening, swift problem resolution, and communication.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 bg-brand-dark border-y border-brand-gray/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Fractional & Full-Time <span class="text-brand-yellow">CMO Services</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Tailored marketing leadership for medium-sized businesses and startups looking to escape plateaus and accelerate revenue.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-brand-black p-8 rounded-2xl border border-brand-gray hover:border-brand-yellow transition-all duration-300 group shadow-lg">
+                    <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-yellow transition-colors duration-300">
+                        <i class="fas fa-chess-knight text-2xl text-brand-yellow group-hover:text-black transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Strategic Planning</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Moving beyond random acts of marketing. I build cohesive, long-term go-to-market strategies aligned with your revenue goals and business operations.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-brand-black p-8 rounded-2xl border border-brand-gray hover:border-brand-yellow transition-all duration-300 group shadow-lg">
+                    <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-yellow transition-colors duration-300">
+                        <i class="fas fa-bullhorn text-2xl text-brand-yellow group-hover:text-black transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Brand Positioning</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Differentiation is survival. I help startups and SMBs carve out a unique space in crowded markets, ensuring your messaging resonates directly with your ideal client profile.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-brand-black p-8 rounded-2xl border border-brand-gray hover:border-brand-yellow transition-all duration-300 group shadow-lg">
+                    <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-yellow transition-colors duration-300">
+                        <i class="fas fa-chart-pie text-2xl text-brand-yellow group-hover:text-black transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Growth & Performance Metrics</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        "Measurable results" isn't just part of my favorite quote. I implement systems to track KPIs, ROI, and customer acquisition costs so we know exactly what's working.
+                    </p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-brand-black p-8 rounded-2xl border border-brand-gray hover:border-brand-yellow transition-all duration-300 group shadow-lg">
+                    <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-yellow transition-colors duration-300">
+                        <i class="fas fa-users-cog text-2xl text-brand-yellow group-hover:text-black transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Marketing Team Leadership</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Drawing from my management experience, I can build, train, and lead your internal marketing team, bridging the gap between executives and creatives.
+                    </p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-brand-black p-8 rounded-2xl border border-brand-gray hover:border-brand-yellow transition-all duration-300 group shadow-lg md:col-span-2 lg:col-span-1">
+                    <div class="w-14 h-14 bg-brand-dark rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-yellow transition-colors duration-300">
+                        <i class="fas fa-comments-dollar text-2xl text-brand-yellow group-hover:text-black transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Budget Optimization</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        As a former business owner of 10 years, I respect the bottom line. I ensure your marketing budget is deployed efficiently, treating your money with the same care as my own.
+                    </p>
+                </div>
+                
+                <!-- CTA Card inside Services -->
+                <div class="bg-gradient-to-br from-brand-yellow to-yellow-600 p-8 rounded-2xl border border-brand-yellow shadow-lg flex flex-col justify-center items-center text-center md:col-span-2 lg:col-span-1">
+                    <h3 class="text-2xl font-bold text-black mb-4">Ready to Scale?</h3>
+                    <p class="text-gray-900 font-medium mb-6">Let's discuss how my leadership can impact your organization.</p>
+                    <a href="#contact" class="bg-black text-white px-6 py-3 rounded-lg font-bold hover:bg-gray-800 transition-colors w-full">
+                        Contact Me Today
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 relative overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute top-0 right-0 -mr-48 -mt-48 w-96 h-96 bg-brand-yellow rounded-full blur-[120px] opacity-10 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 -ml-48 -mb-48 w-96 h-96 bg-brand-yellow rounded-full blur-[120px] opacity-10 pointer-events-none"></div>
+        
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-brand-dark p-8 md:p-12 rounded-3xl border border-brand-gray shadow-2xl">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Let's Fuel Your <span class="text-brand-yellow">Growth</span></h2>
+                    <p class="text-gray-400">Fill out the form below to inquire about my CMO services for your startup or medium-sized business.</p>
+                </div>
+
+                <form id="contactForm" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-400 mb-2">Full Name</label>
+                            <input type="text" id="name" required class="w-full bg-brand-black border border-brand-gray rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-yellow focus:ring-1 focus:ring-brand-yellow transition-colors placeholder-gray-600" placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-400 mb-2">Email Address</label>
+                            <input type="email" id="email" required class="w-full bg-brand-black border border-brand-gray rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-yellow focus:ring-1 focus:ring-brand-yellow transition-colors placeholder-gray-600" placeholder="john@company.com">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="company" class="block text-sm font-medium text-gray-400 mb-2">Company Size / Type</label>
+                        <select id="company" class="w-full bg-brand-black border border-brand-gray rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-yellow focus:ring-1 focus:ring-brand-yellow transition-colors appearance-none">
+                            <option value="startup">Startup</option>
+                            <option value="medium">Medium-Sized Business</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="inquiry" class="block text-sm font-medium text-gray-400 mb-2">How can I help you grow?</label>
+                        <textarea id="inquiry" rows="4" required class="w-full bg-brand-black border border-brand-gray rounded-lg px-4 py-3 text-white focus:outline-none focus:border-brand-yellow focus:ring-1 focus:ring-brand-yellow transition-colors placeholder-gray-600 resize-none" placeholder="Tell me about your current marketing challenges and goals..."></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-brand-yellow text-black font-bold text-lg py-4 rounded-lg hover:bg-yellow-400 transition-all shadow-[0_0_15px_rgba(234,179,8,0.2)] hover:shadow-[0_0_25px_rgba(234,179,8,0.4)] flex justify-center items-center gap-2">
+                        <span>Send Inquiry</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+
+                <!-- Success Message Container (Hidden by default) -->
+                <div id="successMessage" class="hidden mt-6 p-4 bg-green-900/30 border border-green-500 rounded-lg text-green-400 text-center flex-col items-center">
+                    <i class="fas fa-check-circle text-3xl mb-2"></i>
+                    <p class="font-bold">Message Sent Successfully!</p>
+                    <p class="text-sm mt-1">Thank you for reaching out. I'll get back to you shortly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-black py-10 border-t border-brand-gray text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-2xl font-bold tracking-tighter text-white mb-6">
+                MARKETING<span class="text-brand-yellow">LEADER</span>
+            </div>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="text-gray-500 hover:text-brand-yellow text-2xl transition-colors"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-gray-500 hover:text-brand-yellow text-2xl transition-colors"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-gray-500 hover:text-brand-yellow text-2xl transition-colors"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="text-gray-600 text-sm">
+                &copy; <span id="year"></span> All Rights Reserved. Designed for Strategic Growth.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-lg', 'border-brand-gray');
+                nav.classList.remove('border-transparent');
+            } else {
+                nav.classList.remove('shadow-lg');
+                nav.classList.add('border-brand-gray');
+            }
+        });
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Form Submission Handler
+        const contactForm = document.getElementById('contactForm');
+        const successMessage = document.getElementById('successMessage');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent actual form submission for demo
+            
+            // Collect data (you can hook this up to an API later)
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            
+            // Hide form and show success message
+            contactForm.style.display = 'none';
+            successMessage.classList.remove('hidden');
+            successMessage.classList.add('flex');
+            
+            // Optional: reset form after a few seconds and show it again
+            setTimeout(() => {
+                contactForm.reset();
+                contactForm.style.display = 'block';
+                successMessage.classList.add('hidden');
+                successMessage.classList.remove('flex');
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
